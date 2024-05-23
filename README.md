@@ -4,8 +4,12 @@
 
 ## Dev
 
-1. Clone the repository
-2. Install the dependencies
-3. Create an `.env`  file based on `env.template`  
-4. Run prisma migrate `npx prisma migrate dev`  
-5. Run `npm run start:dev` 
+1. Clonar el repositorio
+2. Instalar las dependencias
+2. Crear el archivo `.env` basado en el archivo `.env.template`
+4. Ejecutar migracion de Prisma `npx prisma migrate dev`
+5. Levantar el servicor de NATS
+```
+docker run -d --name nats-sever -p 4222:4222 -p 8222:8222 nats
+```
+6. Levantar el proyecto con `npm run start:dev` 
